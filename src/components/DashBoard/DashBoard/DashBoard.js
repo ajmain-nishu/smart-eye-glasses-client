@@ -98,11 +98,11 @@ const DashBoard = () => {
 
 
 
+<div className="container-fluid">
 
-
-            <div className="dashboard-container">
+            
                 <div className="row">
-                    <div className="col-lg-2 col-md-3 bg-dark text-center">
+                    <div className="col-lg-2 col-md-3 col-12 bg-dark text-center p-0">
                         {/* <div className="dashboard"> */}
                             <h5>Dashboard</h5>
                             {/* <Link to={`${url}`}>
@@ -218,7 +218,16 @@ const DashBoard = () => {
                             </div>
                         {/* </div> */}
                     </div>
-                    <div className="col-lg-10 col-md-9">
+
+
+
+
+                    
+
+
+
+
+                    <div className="col-lg-9 col-md-8 col-12 p-0 container-fluid">
                         <Switch>
                             <Route exact path={path}>
                                 <MyOrders></MyOrders>
@@ -248,7 +257,8 @@ const DashBoard = () => {
                     </div>
                 </div>
             </div>
-        </div>
+            </div>
+        
     );
 };
 

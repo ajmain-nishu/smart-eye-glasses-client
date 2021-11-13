@@ -1,5 +1,5 @@
 import React from "react";
-import aboutImg from "../../../Images/about.png";
+import perfectImg from "../../../Images/Perfect/perfect.jpg";
 import "./About.css";
 
 
@@ -9,23 +9,29 @@ const About = () => {
         <div className="pt-5">
             <div className="container">
                 <div className="row">
+                <h2 className="text-center display-4 pt-3 pb-5 mt-5">-- The Perfect Optical --</h2>
                     
                     {/* image part */}
-                    <div className="col-md-6 col-12">
-                        <img className="w-100" src={aboutImg} alt="" />
+                    <div className="col-md-6 col-12 mt-4">
+                        <img className="w-100" src={perfectImg} alt="" />
                     </div>
 
                     {/* description part */}
                     <div className="col-md-6 col-12">
                         <div className="pt-5 px-4">
-                            <h2 className="pt-5 fw-light">About Us</h2>
-                            <h2>Welcome to our Travel Agency</h2>
+                            {/* <h2 className="pt-5 fw-light">About Us</h2> */}
+                            <h2>Choose your first frame smarteye</h2>
                             <p>
-                            “Travel is the main thing you purchase that makes you more extravagant”. We, at ‘Organization Name’, swear by this and put stock in satisfying travel dreams that make you perpetually rich constantly.
-
-                            We have been moving excellent encounters for a considerable length of time through our cutting-edge planned occasion bundles and other fundamental travel administrations. We rouse our clients to carry on with a rich life, brimming with extraordinary travel encounters. 
+                            “Sunglasses or sun glasses (informally called shades or sunnies; more names below) are a form of protective eyewear designed primarily to prevent bright sunlight and high-energy visible light from damaging or discomforting the eyes.
                             </p>
-                            <button className="about__btn btn my-5 text-white">KNOW MORE</button>
+                            <ul>
+                                <li>7-25 days on delivary</li>
+                                <li>Maion Material: Plastic</li>
+                                <li>For Hard or Soft lenses</li>
+                                <li>Coated lids for superior grip</li>
+                                <li>Leak-proof design</li>
+                            </ul>
+                            {/* <button className="about__btn btn my-5 text-white">KNOW MORE</button> */}
                         </div>
                     </div>
 

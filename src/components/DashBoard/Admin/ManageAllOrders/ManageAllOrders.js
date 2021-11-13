@@ -59,13 +59,14 @@ const ManageAllOrders = () => {
             {
                 user.email && <div>
                     <h1 className='m-5 text-center'>All User Orders</h1>
-                    <table className="table table-hover table-striped w-75 container ">
+                    <table className="table table-hover table-striped w-75 mx-auto">
                         <thead>
                             <tr>
                                 <th scope="col">SL No.</th>
                                 <th scope="col">Name</th>
                                 <th scope="col">Email</th>
                                 <th scope="col">Status</th>
+                                <th scope="col">Action</th>
                             </tr>
                         </thead>
 
@@ -78,11 +79,13 @@ const ManageAllOrders = () => {
                                     <td className="">{pd?.email}</td>
                                     <td>
                                     <input
+                                    className="w-100 form-control"
                                     onChange={handleStatus}
                                     type="text"
                                     defaultValue={pd.status}
                                     placeholder="type Shipped"
                                     />
+                                    {/* <button onClick={() => handleUpdate(allOrders[index]?._id)} className="btn btn-secondary">Update</button> */}
                                     </td>
                                     {/* <td>
                                     <button onClick={() => itemDelete(allOrders[index]?._id)} className="btn btn-secondary">Delete</button>

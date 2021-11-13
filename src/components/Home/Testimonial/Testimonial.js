@@ -13,9 +13,8 @@ const Testimonial = () => {
     console.log(reviews)
     return (
         <div>
-            <h2>Review Length: {reviews.length}</h2>
-            <h2 className="text-center display-4 fw-bold pt-5 pb-4 mt-5">Services We Offer</h2>
-            <p className="text-center text-muted fs-6 pb-5">This is our services. You can find any service what you want</p>
+            <h2 className="text-center display-4 py-5 mt-5">---- Reviews -----</h2>
+            {/* <p className="text-center text-muted fs-6 pb-5">This is our services. You can find any service what you want</p> */}
             <div className="container">
                 <div className="col-12">
                     <div className="row pb-3">
