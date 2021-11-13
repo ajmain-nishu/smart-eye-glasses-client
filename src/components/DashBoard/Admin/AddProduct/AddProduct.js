@@ -1,7 +1,10 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
 
+
+// dashboard add product sectoin
 const AddProduct = () => {
+
     const { register, handleSubmit, reset , formState: { errors } } = useForm();
     const onSubmit = data => {
 
@@ -19,6 +22,7 @@ const AddProduct = () => {
             reset()
         })
     };
+
     return (
         <div className="my-5">
             <h2 className="text-center py-5">Add Product Here</h2>
@@ -39,5 +43,7 @@ const AddProduct = () => {
         </div>
     );
 };
+
+
 
 export default AddProduct;

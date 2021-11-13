@@ -1,14 +1,18 @@
 import React, { useEffect, useState } from 'react';
 import ManageSingleProduct from '../ManageSingleProduct/ManageSingleProduct';
 
+
+// dashboard manage products section
 const ManageProducts = () => {
     const [products, setProducts] = useState([])
 
+    // api call
     useEffect(() => {
         fetch("https://thawing-forest-04721.herokuapp.com/exploreProduct")
             .then((res) => res.json())
             .then((data) => setProducts(data));
     }, []);
+    
     return (
         <div className="homeservices__bg py-5">
 

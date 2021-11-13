@@ -28,7 +28,7 @@ const useFirebase = () => {
             setIsLoading(false)
         })
         return () => unsubscribe()
-    }, [])
+    }, [auth])
 
     // google login
     const signInWithGoogle = () => {
@@ -46,7 +46,7 @@ const useFirebase = () => {
         return signInWithEmailAndPassword(auth, email, password)
     }
 
-
+    
     const updateName = (name) => {
         updateProfile(auth.currentUser, { displayName: name })
             .then(() => {
@@ -65,8 +65,7 @@ const useFirebase = () => {
         });
     }
 
-
-
+    // make admin
     const handleUserInfoRegister = (email) => {
         fetch("https://thawing-forest-04721.herokuapp.com/addUserInfo", {
             method: "POST",
@@ -74,7 +73,7 @@ const useFirebase = () => {
             body: JSON.stringify({ email }),
         })
         .then((res) => res.json())
-        .then((result) => console.log(result));
+        .then((result) => {});
     };
 
     

@@ -1,19 +1,20 @@
 import React, { useEffect, useState } from 'react';
 import useAuth from '../../../../hooks/useAuth';
 
+
+// dashboard manage all orders section
 const ManageAllOrders = () => {
     const [allOrders, setAllOrders] = useState([]);
-    // const [cencel, setCencel] = useState(false)
     const [status, setStatus] = useState("");
     const { user } = useAuth()
 
 
-
+    // input field
     const handleStatus = (e) => {
         setStatus(e.target.value);
     };
 
-    
+    // update button
     const handleUpdate = (id) => {
         const process = window.confirm('Are you want to sure update?')
         if (process) {
@@ -25,35 +26,13 @@ const ManageAllOrders = () => {
         }
     };
 
-
     //api call
     useEffect(() => {
         fetch("https://thawing-forest-04721.herokuapp.com/myOrders")
             .then((res) => res.json())
             .then((data) => setAllOrders(data));
     }, []);
-    // console.log(allOrders)
-    //delete button
-    // const itemDelete = (id) => {
-    //     const proceed = window.confirm('Are you want to sure delete?');
-    //     if (proceed) {
-    //         const uri = `https://thawing-forest-04721.herokuapp.com/myOrders/${id}`
-    //         fetch(uri, {
-    //             method: 'DELETE',
-    //             headers: { "content-type": "application/json" }
-    //         })
-    //             .then(res => res.json())
-    //             .then(data => {
-    //                 if (data?.deletedCount) {
-    //                     alert('Deleted Successfully')
-    //                     setCencel(!cencel);
-    //                 } else {
-    //                     setCencel(false);
-    //                 }
-    //                 window.location.reload()
-    //             })
-    //     }
-    // }
+    
     return (
         <div>
             {
@@ -85,26 +64,20 @@ const ManageAllOrders = () => {
                                     defaultValue={pd.status}
                                     placeholder="type Shipped"
                                     />
-                                    {/* <button onClick={() => handleUpdate(allOrders[index]?._id)} className="btn btn-secondary">Update</button> */}
                                     </td>
-                                    {/* <td>
-                                    <button onClick={() => itemDelete(allOrders[index]?._id)} className="btn btn-secondary">Delete</button>
-                                    </td> */}
-                                    
                                     <td>
                                     <button onClick={() => handleUpdate(allOrders[index]?._id)} className="btn btn-secondary">Update</button>
                                     </td>
-
                                 </tr>
                             </tbody>
                         ))}
-
                     </table>
                 </div>
             }
-
         </div>
     );
 };
+
+
 
 export default ManageAllOrders;

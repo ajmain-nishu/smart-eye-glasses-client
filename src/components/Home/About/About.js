@@ -1,6 +1,5 @@
 import React from "react";
 import perfectImg from "../../../Images/Perfect/perfect.jpg";
-import "./About.css";
 
 
 // home about section
@@ -19,7 +18,6 @@ const About = () => {
                     {/* description part */}
                     <div className="col-md-6 col-12">
                         <div className="pt-5 px-4">
-                            {/* <h2 className="pt-5 fw-light">About Us</h2> */}
                             <h2>Choose your first frame smarteye</h2>
                             <p>
                             “Sunglasses or sun glasses (informally called shades or sunnies; more names below) are a form of protective eyewear designed primarily to prevent bright sunlight and high-energy visible light from damaging or discomforting the eyes.
@@ -31,11 +29,8 @@ const About = () => {
                                 <li>Coated lids for superior grip</li>
                                 <li>Leak-proof design</li>
                             </ul>
-                            {/* <button className="about__btn btn my-5 text-white">KNOW MORE</button> */}
                         </div>
                     </div>
-
-
                 </div>
             </div>
         </div>

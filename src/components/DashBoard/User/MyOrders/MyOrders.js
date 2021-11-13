@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import useAuth from '../../../../hooks/useAuth';
 import MySingleOrder from '../MySingleOrder/MySingleOrder';
 
+
+// dashboard my orders section
 const MyOrders = () => {
     const {user} = useAuth()
     const [myOrders, setMyOrders] = useState([])
@@ -15,6 +17,7 @@ const MyOrders = () => {
 
     //filter email
     const productItem = myOrders?.filter(item => item.email === user.email)
+
     return (
         <div>
             <h2 className="text-center my-5">My Total Orders: {productItem.length}</h2>
@@ -27,6 +30,8 @@ const MyOrders = () => {
                 }
                 <div className="container">
                     <div className="row pb-5">
+
+                        {/* value pass in other componet */}
                         {
                             productItem.map(orders => <MySingleOrder key={orders._id} orders={orders}></MySingleOrder>)
                         }

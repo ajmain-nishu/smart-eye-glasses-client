@@ -1,5 +1,7 @@
 import React from 'react';
 
+
+// dasboard pay section
 const Pay = () => {
     return (
         <div className="p-5 ">

@@ -1,9 +1,11 @@
 import React from 'react';
 import Rating from 'react-rating';
-import './SingleTestimonial.css'
+import './SingleTestimonial.css';
 
 const SingleTestimonial = (props) => {
+
     const { rating, email, displayName, photoURL, comments} = props.review;
+
     return (
         <div className="col-lg-4 col-sm-6 col-12 gy-4 gx-5">
                 <div className="card h-100 shadow-sm ">
@@ -24,16 +26,12 @@ const SingleTestimonial = (props) => {
                         <h6 className="fs-5">{displayName}</h6>
                         <h5 className="text-muted fs-6">${email}</h5>
                         <p>{comments.slice(0, 50)}</p>
-                        {/* <p className="text-muted">{description.slice(0, 70)}....</p> */}
-    
-                        {/* button */}
-                        {/* <Link to={`/purchase/${_id}`}>
-                            <button className="btn homeservice__btn mb-4">Purchase</button>
-                        </Link> */}
                     </div>
                 </div>
             </div>
     );
 };
+
+
 
 export default SingleTestimonial;

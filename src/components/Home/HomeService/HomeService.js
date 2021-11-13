@@ -11,7 +11,7 @@ const HomeService = (props) => {
     const { _id, brand_name, img, description, price, star } = props.homeservice;
     return (
         <div className="col-lg-4 col-sm-6 col-12 gy-4 gx-5">
-            <div className="hello h-100">
+            <div className="card__hover h-100">
 
                 {/* image part */}
                 <div className="text-center mb-3 homeservice__img">

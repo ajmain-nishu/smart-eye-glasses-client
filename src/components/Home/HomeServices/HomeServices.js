@@ -9,6 +9,7 @@ import './HomeServices.css'
 const HomeServices = () => {
     const [homeservices, setHomeServices] = useState([])
 
+    // api call
     useEffect(() => {
         fetch("https://thawing-forest-04721.herokuapp.com/homepageProduct")
             .then((res) => res.json())

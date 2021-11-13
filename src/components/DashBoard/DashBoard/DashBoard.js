@@ -9,13 +9,16 @@ import ManageProducts from '../Admin/ManageProducts/ManageProducts';
 import MyOrders from '../User/MyOrders/MyOrders';
 import Pay from '../User/Pay/Pay';
 import Review from '../User/Review/Review';
-import './DashBoard.css'
 
+
+
+// navbar dashboard section
 const DashBoard = () => {
     let { path, url } = useRouteMatch();
     const { user, logOut } = useAuth();
     const [isAdmin, setIsAdmin] = useState(false);
 
+    // api call
     useEffect(() => {
         fetch(`https://thawing-forest-04721.herokuapp.com/makeAdmin/${user?.email}`)
             .then((res) => res.json())
@@ -27,239 +30,122 @@ const DashBoard = () => {
                 }
             });
     }, [user?.email]);
+
     return (
         <div>
-
-
-
-
-
-            {/* <div className="row">
-                <div className="col-md-2 col-12">
-                    <div className="d-flex flex-column">
-                    <Link to={`${url}`}>
-                                <li className="nav-item text-dark mt-5"></li>
-                            </Link>
-
-                            <Link to={`${url}/myorders`}>
-                                <li className="nav-item text-dark mt-5">My Orders</li>
-                            </Link>
-
-                            <Link to={`${url}/review`}>
-                                <li className="mt-5">Review</li>
-                            </Link>
-                            <Link to={`${url}/pay`}>
-                                <li className=" mt-5">Pay</li>
-                            </Link>
-
-                            <li className="nav-item text-white">
-                                <Link className="nav-link fs-5 text-dark" to="/register">
-                                    Register
-                                </Link>
-                            </li>
-                    </div>
-                </div>
-                <div className="col-md-10 col-12">
-
-                </div>
-            </div> */}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div className="container-fluid">
-
-            
+            <div className="container-fluid">
                 <div className="row">
                     <div className="col-lg-2 col-md-3 col-12 bg-dark text-center p-0">
-                        {/* <div className="dashboard"> */}
-                            <h5>Dashboard</h5>
-                            {/* <Link to={`${url}`}>
-                                <li className="dashboard-menu mt-5"></li>
-                            </Link> */}
 
-                            <li className="nav-item">
-                                <Link className="nav-link fs-5 text-white" to={`${url}`}>
+                        {/* <h5>Dashboard</h5> */}
+                        
+                        {/* default link */}
+                        <li className="nav-item">
+                            <Link className="nav-link fs-5 text-white" to={`${url}`}>
+                            </Link>
+                        </li>
+
+                        {/* my order link */}
+                        <li className="nav-item">
+                            <Link className="nav-link fs-5 text-white" to={`${url}/myorders`}>
+                                My Orders
+                            </Link>
+                        </li>
+
+                        {/* review link */}
+                        <li className="nav-item">
+                            <Link className="nav-link fs-5 text-white" to={`${url}/review`}>
+                                Review
+                            </Link>
+                        </li>
+
+                        {/* pay link */}
+                        <li className="nav-item">
+                            <Link className="nav-link fs-5 text-white" to={`${url}/pay`}>
+                                Pay
+                            </Link>
+                        </li>
+
+                        {/* log out link */}
+                        <li className="nav-item">
+                            <button className="text-white btn btn-outline-secondary btn-md mt-2" onClick={logOut}>Log Out</button>
+                        </li>
+
+
+                        {/* admin part */}
+                        <div>
+
+                            {isAdmin && (
+                                <div>
                                     
-                                </Link>
-                            </li>
-
-                            {/* <Link to={`${url}/myorders`}>
-                                <li className="dashboard-menu mt-5">My Orders</li>
-                            </Link> */}
-
-                            <li className="nav-item">
-                                <Link className="nav-link fs-5 text-white" to={`${url}/myorders`}>
-                                    My Orders
-                                </Link>
-                            </li>
-
-                            {/* <Link to={`${url}/review`}>
-                                <li className="dashboard-menu mt-5">Review</li>
-                            </Link> */}
-
-
-                            <li className="nav-item">
-                                <Link className="nav-link fs-5 text-white" to={`${url}/review`}>
-                                    Review
-                                </Link>
-                            </li>
-
-
-
-                            {/* <Link to={`${url}/pay`}>
-                                <li className="dashboard-menu mt-5">Pay</li>
-                            </Link> */}
-
-
-                            <li className="nav-item">
-                                <Link className="nav-link fs-5 text-white" to={`${url}/pay`}>
-                                    Pay
-                                </Link>
-                            </li>
-
-
-                            <li className="nav-item">
-                                
-                                <button className="text-white btn btn-outline-secondary btn-md mt-2" onClick={logOut}>Log Out</button>
-                            </li>
-
-
-
-                            <div className="admin-dashboard">
-                                {/* <li className="dashboard-menu mt-5">Admin</li> */}
-
-                                {isAdmin && (
-                                    <div>
-                                    {/* <Link to={`${url}/addproduct`}>
-                                        <li className="dashboard-menu">Add Product</li>
-                                    </Link> */}
-
+                                    {/* add product link */}
                                     <li className="nav-item">
-                                <Link className="nav-link fs-5 text-white" to={`${url}/addproduct`}>
-                                    Add Product
-                                </Link>
-                                </li>
+                                        <Link className="nav-link fs-5 text-white" to={`${url}/addproduct`}>
+                                            Add Product
+                                        </Link>
+                                    </li>
 
+                                    {/* make as admin link */}
+                                    <li className="nav-item">
+                                        <Link className="nav-link fs-5 text-white" to={`${url}/makeadmin`}>
+                                            Make Admin
+                                        </Link>
+                                    </li>
 
-                                    {/* <Link to={`${url}/makeadmin`}>
-                                    <li className="dashboard-menu">Make Admin</li>
-                                </Link> */}
+                                    {/* manage products link */}
+                                    <li className="nav-item">
+                                        <Link className="nav-link fs-5 text-white" to={`${url}/manageproducts`}>
+                                            Manage Products
+                                        </Link>
+                                    </li>
 
-
-                                <li className="nav-item">
-                                <Link className="nav-link fs-5 text-white" to={`${url}/makeadmin`}>
-                                    Make Admin
-                                </Link>
-                            </li>
-
-
-
-                                {/* <Link to={`${url}/manageproducts`}>
-                                    <li className="dashboard-menu">Manage Products</li>
-                                </Link> */}
-
-
-                                <li className="nav-item">
-                                <Link className="nav-link fs-5 text-white" to={`${url}/manageproducts`}>
-                                    Manage Products
-                                </Link>
-                            </li>
-
-
-                                {/* <Link to={`${url}/manageallorders`}>
-                                    <li className="dashboard-menu">Manage All Orders</li>
-                                </Link> */}
-
-
-
-
-                                <li className="nav-item">
-                                <Link className="nav-link fs-5 text-white mb-4" to={`${url}/manageallorders`}>
-                                    Manage All Orders
-                                </Link>
-                            </li>
-                                    </div>
-                                    
-                                    
-                                )}
-                                
-                            </div>
-                        {/* </div> */}
+                                    {/* manage all orders link */}
+                                    <li className="nav-item">
+                                        <Link className="nav-link fs-5 text-white mb-4" to={`${url}/manageallorders`}>
+                                            Manage All Orders
+                                        </Link>
+                                    </li>
+                                </div>
+                            )}
+                        </div>
                     </div>
 
 
-
-
-                    
-
-
-
-
-                    <div className="col-lg-9 col-md-8 col-12 p-0 container-fluid">
+                    {/* componet part */}
+                    <div className="col-lg-10 col-md-9 col-12 p-0 container-fluid">
                         <Switch>
                             <Route exact path={path}>
                                 <MyOrders></MyOrders>
                             </Route>
                             <Route exact path={`${path}/myorders`}>
-                                    <MyOrders></MyOrders>
+                                <MyOrders></MyOrders>
                             </Route>
                             <Route exact path={`${path}/review`}>
-                                    <Review></Review>
+                                <Review></Review>
                             </Route>
                             <Route exact path={`${path}/pay`}>
-                                    <Pay></Pay>
+                                <Pay></Pay>
                             </Route>
                             <Route exact path={`${path}/addproduct`}>
-                                    <AddProduct></AddProduct>
+                                <AddProduct></AddProduct>
                             </Route>
                             <Route exact path={`${path}/makeadmin`}>
-                                    <MakeAdmin></MakeAdmin>
+                                <MakeAdmin></MakeAdmin>
                             </Route>
                             <Route exact path={`${path}/manageproducts`}>
-                                    <ManageProducts></ManageProducts>
+                                <ManageProducts></ManageProducts>
                             </Route>
                             <Route exact path={`${path}/manageallorders`}>
-                                    <ManageAllOrders></ManageAllOrders>
+                                <ManageAllOrders></ManageAllOrders>
                             </Route>
                         </Switch>
                     </div>
                 </div>
             </div>
-            </div>
-        
+        </div>
     );
 };
+
+
 
 export default DashBoard;

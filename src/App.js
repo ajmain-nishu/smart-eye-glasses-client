@@ -41,17 +41,12 @@ function App() {
           <PrivateRoute path="/dashboard">
             <DashBoard></DashBoard>
           </PrivateRoute>
-          {/* <Route path="/purchase">
-            <Purchase></Purchase>
-          </Route> */}
           <PrivateRoute path="/myorders">
             <MyOrders></MyOrders>
           </PrivateRoute>
           <PrivateRoute path="/pay">
             <Pay></Pay>
           </PrivateRoute>
-          
-          
           <PrivateRoute path="/review">
             <Review></Review>
           </PrivateRoute>
@@ -67,12 +62,9 @@ function App() {
           <PrivateRoute path="/manageproducts">
             <ManageProducts></ManageProducts>
           </PrivateRoute>
-          
           <PrivateRoute exact path="/purchase/:serviceId">
             <Purchase></Purchase>
           </PrivateRoute>
-          
-          
           <Route path="/register">
             <Registration></Registration>
           </Route>

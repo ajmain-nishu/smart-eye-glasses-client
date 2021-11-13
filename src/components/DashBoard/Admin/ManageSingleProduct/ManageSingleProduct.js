@@ -1,9 +1,13 @@
 import React, { useState } from 'react';
 import Rating from 'react-rating';
 
+
+// dashboard manage products section
 const ManageSingleProduct = (props) => {
     const { _id, brand_name, img, description, price, star } = props.product;
     const [cancel, setCencel] = useState(false)
+
+    // delete button
     const itemDelete = id => {
         const proceed = window.confirm('Are you sure want to delete ?');
         if (proceed) {
@@ -25,13 +29,14 @@ const ManageSingleProduct = (props) => {
                 })
         }
     }
+
     return (
         <div className="col-lg-4 col-md-6 col-12 gy-4 gx-5">
                 <div className="card h-100 shadow-sm ">
     
                     {/* image part */}
                     <div className="text-center mb-3">
-                        <img className="homeservice__img w-100" src={img} alt="" />
+                        <img className="w-100" src={img} alt="" />
                     </div>
     
                     {/* text part */}

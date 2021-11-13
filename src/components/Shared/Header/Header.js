@@ -10,11 +10,6 @@ import logo from '../../../Images/Logo/logo.png'
 const Header = () => {
     const { logOut, user } = useAuth()
 
-
-
-
-
-    
     return (
         <div>
             <nav className="navbar navbar-expand-md bg-dark navbar-dark">
@@ -50,7 +45,7 @@ const Header = () => {
                                     Home
                                 </Link>
                             </li>
-                            
+
 
                             {/* explore part */}
                             <li className="nav-item">
@@ -59,21 +54,12 @@ const Header = () => {
                                 </Link>
                             </li>
 
-                            {/* founder part */}
-                            {/* <li className="nav-item">
-                                <Link
-                                    className="nav-link text-white fs-5"
-                                    to="/founder">
-                                    Founder
-                                </Link>
-                            </li> */}
-
 
                             {user?.email ?
                                 <div className="d-md-flex">
 
 
-                                    {/* my order part */}
+                                    {/* dashboard part */}
                                     <li className="nav-item">
                                         <Link className="nav-link text-white fs-5" to="/dashboard">
                                             DashBoard
@@ -81,41 +67,22 @@ const Header = () => {
                                     </li>
 
 
-                                    {/* manage all orders part */}
-                                    {/* <li className="nav-item">
-                                        <Link className="nav-link text-white fs-5" to="/manageorders">
-                                            Manage All Orders
-                                        </Link>
-                                    </li> */}
-
-
-                                    {/* add services part */}
-                                    {/* <li className="nav-item">
-                                        <Link className="nav-link text-white fs-5" to="/addservices">
-                                            Add Services
-                                        </Link>
-                                    </li> */}
-
-                                    
-                                    <div className="">
+                                    <div>
                                         {/* log out button */}
                                         <div>
                                             <button className="text-white btn btn-outline-secondary btn-md mt-2" onClick={logOut}>Log Out</button>
-                                            <span className="pt-2 text-white"> Signed: {user?.displayName}</span>
-                                        </div>
-                                    {/*sign in user name */}
-                                    <div>
-                                    
-                                    </div>
 
+                                            {/*sign in user name */}
+                                            <span className="text-white"> Signed: {user?.displayName}</span>
+                                        </div>
+                                        
                                         
                                     </div>
-                                    
                                 </div>
-                                :
-                                <div className="d-md-inline-flex">
 
-                                    
+                                :
+
+                                <div className="d-md-inline-flex">
 
                                     {/* registration link */}
                                     <li className="nav-item text-white">
@@ -137,27 +104,8 @@ const Header = () => {
                 </div>
             </nav>
         </div>
-
-
-
-
-
-
-
-
-
-    
-
-    
-
-
-
-
-
     );
 };
-
-
 
 
 

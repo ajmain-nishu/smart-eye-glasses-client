@@ -1,17 +1,18 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+
+//navbar explore section
 const SingleExplore = (props) => {
     const { _id, brand_name, img, description, price, star } = props.product;
     
-        
         return (
             <div className="col-lg-4 col-sm-6 col-12 gy-4 gx-5">
                 <div className="card h-100 shadow-sm ">
     
                     {/* image part */}
                     <div className="text-center mb-3">
-                        <img className="homeservice__img w-100" src={img} alt="" />
+                        <img className="img-fluid" src={img} alt="" />
                     </div>
     
                     {/* text part */}
@@ -30,5 +31,7 @@ const SingleExplore = (props) => {
             </div>
         );
 };
+
+
 
 export default SingleExplore;
