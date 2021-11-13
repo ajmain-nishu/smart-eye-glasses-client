@@ -5,7 +5,7 @@ import perfectImg from "../../../Images/Perfect/perfect.jpg";
 // home about section
 const About = () => {
     return (
-        <div className="pt-5">
+        <div className="py-5">
             <div className="container">
                 <div className="row">
                 <h2 className="text-center display-4 pt-3 pb-5 mt-5">-- The Perfect Optical --</h2>

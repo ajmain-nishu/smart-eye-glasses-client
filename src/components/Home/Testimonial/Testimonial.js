@@ -14,7 +14,7 @@ const Testimonial = () => {
     }, []);
 
     return (
-        <div>
+        <div className="pb-5">
             <h2 className="text-center display-4 py-5 mt-5">---- Reviews -----</h2>
             
             {/* card */}
