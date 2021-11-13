@@ -1,0 +1,28 @@
+
+
+.homeservice__btn__outline {
+    border-bottom: 2px solid black;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    color: black;
+    font-weight: bold;
+    margin: 55px 0px;
+    padding: 8px 20px;
+    font-style: italic;
+}
+
+.homeservice__btn__outline:hover {
+    /* background-color: rgb(238, 238, 238); */
+    background-color: black;
+    border: none;
+    color: white;
+    padding: 8px 20px;
+    text-align: center;
+    /* font-size: 16px; */
+    /* margin: 4px 2px; */
+    opacity: 1;
+    transition: 0.5s;
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
+}

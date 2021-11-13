@@ -1,0 +1,38 @@
+.homeservice__img {
+    /* width: 300px; */
+    /* height: 70px; */
+}
+
+.homeservice__btn {
+    /* background-color: rgba(72, 52, 52, .6) */
+    border-bottom: 1px dotted black;
+    color: black;
+    font-weight: bold;
+    margin-top: 5px;
+    padding: 8px 20px;
+    font-style: italic;
+}
+
+.hello:hover .homeservice__btn {
+    /* background-color: rgb(238, 238, 238); */
+    background-color: black;
+    border: none;
+    color: white;
+    padding: 8px 20px;
+    text-align: center;
+    /* font-size: 16px; */
+    /* margin: 4px 2px; */
+    opacity: 1;
+    transition: 0.5s;
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.fas {
+    color: #FFAB00;
+}
+
+.fa-star {
+    font-size: 15px;
+}
