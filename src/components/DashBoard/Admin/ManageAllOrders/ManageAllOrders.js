@@ -55,18 +55,18 @@ const ManageAllOrders = () => {
                                 <tr>
                                     <td key={pd?._id}>{index + 1}</td>
                                     <td>{pd?.brand_name}</td>
-                                    <td className="">{pd?.email}</td>
+                                    <td>{pd?.email}</td>
                                     <td>
                                     <input
-                                    className="w-100 form-control"
-                                    onChange={handleStatus}
-                                    type="text"
-                                    defaultValue={pd.status}
-                                    placeholder="type Shipped"
+                                        className="w-100 form-control"
+                                        onChange={handleStatus}
+                                        type="text"
+                                        defaultValue={pd.status}
+                                        placeholder="type Shipped"
                                     />
                                     </td>
                                     <td>
-                                    <button onClick={() => handleUpdate(allOrders[index]?._id)} className="btn btn-secondary">Update</button>
+                                        <button onClick={() => handleUpdate(allOrders[index]?._id)} className="btn btn-secondary">Update</button>
                                     </td>
                                 </tr>
                             </tbody>

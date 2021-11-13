@@ -19,7 +19,7 @@ const SingleExplore = (props) => {
                     <div className="text-center px-4">
                         <h2 className="fs-3">{brand_name}</h2>
                         <h5 className="text-muted">Price: ${price}</h5>
-                        <h6>{star}</h6>
+                        <h6>Rating: {star}</h6>
                         <p className="text-muted">{description.slice(0, 70)}....</p>
     
                         {/* button */}
